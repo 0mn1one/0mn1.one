@@ -34,8 +34,19 @@
               "icon": "lucide-file",
               "title": "use-report-web-vitals"
             }
+          },
+          {
+            "id": "d8dc3a7d2a3142f3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,8 +205,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "420a211b537c9cb6",
+  "active": "d8dc3a7d2a3142f3",
   "lastOpenFiles": [
+    "fiverr-gigs/gig-1-landing-page.md",
+    "products/garden-planner",
+    "products",
     "fiverr-gigs/gig-5-custom-website.md",
     "fiverr-gigs/gig-4-ai-chatbot.md",
     "fiverr-gigs/gig-3-social-media.md",
@@ -208,7 +222,6 @@
     "node_modules/next/dist/docs/01-app/02-guides/production-checklist.md",
     "fiverr-gig-terminal-prompt.md",
     "fiverr-gig-creation-guide.md",
-    "fiverr-gigs/gig-1-landing-page.md",
     "platform-profiles",
     "fiverr-gigs/profile.md"
   ]

@@ -41,7 +41,7 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-warm to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/10 to-background" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="animate-fade-in">
           <p className="text-accent font-mono text-sm tracking-widest uppercase mb-6">
@@ -67,7 +67,7 @@ function Hero() {
           </Link>
           <Link
             href="#pillars"
-            className="px-8 py-4 border border-foreground/10 rounded-full text-base font-medium hover:bg-foreground/5 transition-colors"
+            className="px-8 py-4 border border-accent/20 text-accent rounded-full text-base font-medium hover:bg-accent/5 transition-colors"
           >
             See the Pillars
           </Link>
@@ -81,7 +81,7 @@ function Hero() {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          className="text-foreground/30"
+          className="text-accent/40"
         >
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>
@@ -209,7 +209,7 @@ function Pillars() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="p-8 rounded-2xl bg-background border border-foreground/5 hover:border-accent/20 transition-colors"
+              className="p-8 rounded-2xl bg-background border border-accent/10 hover:border-accent/30 transition-colors"
             >
               <div className="text-accent mb-4">{pillar.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{pillar.title}</h3>
@@ -256,8 +256,8 @@ function Join() {
           like the only work worth doing — you are already part of this.
         </p>
         <a
-          href="mailto:hello@0mn1.one"
-          className="inline-block px-8 py-4 bg-white text-accent rounded-full text-base font-medium hover:bg-white/90 transition-colors"
+          href="mailto:0@0mn1.one"
+          className="inline-block px-8 py-4 bg-white text-accent-deep rounded-full text-base font-medium hover:bg-white/90 transition-colors"
         >
           Get in Touch
         </a>
