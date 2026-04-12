@@ -21,6 +21,12 @@ function Nav() {
             Pillars
           </Link>
           <Link
+            href="/blog"
+            className="text-foreground/60 hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
+          <Link
             href="#join"
             className="px-4 py-2 bg-accent text-white rounded-full text-sm hover:bg-accent-light transition-colors"
           >
