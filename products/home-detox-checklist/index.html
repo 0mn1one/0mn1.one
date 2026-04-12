@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0mn1 Home Detox Checklist</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.65in;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+  }
+
+  /* Cover */
+  .cover {
+    background: linear-gradient(135deg, #5a8a6a 0%, #7aad8a 50%, #a3ccb0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .cover-logo {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+
+  .cover h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .cover h2 {
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 50px;
+    max-width: 5in;
+    line-height: 1.4;
+  }
+
+  .cover-tagline {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .cover-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.3;
+  }
+
+  /* Headers */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid #5a8a6a;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .page-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #5a8a6a;
+  }
+
+  .page-header .brand {
+    font-size: 10px;
+    color: #999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* Room section header */
+  .room-header {
+    background: #5a8a6a;
+    color: white;
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .room-header:first-of-type {
+    margin-top: 0;
+  }
+
+  /* Category label */
+  .category-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #5a8a6a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 11px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+  }
+
+  .checklist li:last-child {
+    border-bottom: none;
+  }
+
+  .checkbox {
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #5a8a6a;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .swap-arrow {
+    color: #5a8a6a;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .toxic {
+    color: #c0392b;
+    font-weight: 600;
+  }
+
+  .clean {
+    color: #27ae60;
+    font-weight: 600;
+  }
+
+  /* Swap table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5px;
+    margin-top: 6px;
+  }
+
+  th {
+    background: #5a8a6a;
+    color: white;
+    padding: 6px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 7px 6px;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background: #f0f5f1;
+  }
+
+  /* Info box */
+  .info-box {
+    background: #f0f5f1;
+    border-left: 3px solid #5a8a6a;
+    padding: 10px 14px;
+    margin-top: 12px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .info-box h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: #5a8a6a;
+    margin-bottom: 4px;
+  }
+
+  .info-box p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  /* Warning box */
+  .warning-box {
+    background: #fdf2f2;
+    border-left: 3px solid #c0392b;
+    padding: 10px 14px;
+    margin-top: 12px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .warning-box h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: #c0392b;
+    margin-bottom: 4px;
+  }
+
+  .warning-box p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  /* Intro page */
+  .intro-section {
+    margin-bottom: 18px;
+  }
+
+  .intro-section h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5a8a6a;
+    margin-bottom: 6px;
+  }
+
+  .intro-section p {
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  /* Priority tags */
+  .priority-high {
+    display: inline-block;
+    background: #c0392b;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+
+  .priority-med {
+    display: inline-block;
+    background: #e67e22;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+
+  .priority-low {
+    display: inline-block;
+    background: #5a8a6a;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+
+  /* DIY recipe box */
+  .recipe-box {
+    border: 1px solid #d4e4d8;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 10px;
+    background: #fafcfb;
+  }
+
+  .recipe-box h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #5a8a6a;
+    margin-bottom: 6px;
+  }
+
+  .recipe-box p, .recipe-box li {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  .recipe-box ul {
+    padding-left: 16px;
+    margin-top: 4px;
+  }
+
+  /* Two column layout */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* Notes lines */
+  .notes-lines {
+    margin-top: 10px;
+  }
+
+  .notes-lines .line {
+    border-bottom: 1px solid #e5e5e5;
+    height: 24px;
+  }
+
+  /* Footer */
+  .page-footer {
+    position: absolute;
+    bottom: 0.65in;
+    left: 0.65in;
+    right: 0.65in;
+    text-align: center;
+    font-size: 9px;
+    color: #bbb;
+    letter-spacing: 1px;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+  }
+
+  @media screen {
+    body { background: #e5e5e5; }
+    .page {
+      margin: 20px auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: Cover -->
+<div class="page cover">
+  <div class="cover-logo">0mn1.one</div>
+  <div class="cover-icon">&#x1f331;</div>
+  <h1>Home Detox<br>Checklist</h1>
+  <h2>A room-by-room guide to removing toxic products from your home and replacing them with clean, natural alternatives</h2>
+  <div class="cover-tagline">Clean home, clean life</div>
+</div>
+
+<!-- PAGE 2: Welcome / How to Use -->
+<div class="page">
+  <div class="page-header">
+    <h2>Welcome</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+
+  <div class="intro-section">
+    <h3>Why Detox Your Home?</h3>
+    <p>The average home contains over 500 chemicals. Many of them are in products you use every single day — your cleaning spray, your shampoo, your laundry detergent, even your cookware. These chemicals are linked to hormone disruption, respiratory issues, skin irritation, and long-term health problems. The good news? Swapping them out is simple, affordable, and often cheaper than what you're buying now.</p>
+  </div>
+
+  <div class="intro-section">
+    <h3>How to Use This Checklist</h3>
+    <p><strong>Go room by room.</strong> Each section covers a specific area of your home with the most common toxic products found there.<br><br>
+    <strong>Check the priority.</strong> <span class="priority-high">High</span> items have the biggest health impact — start there. <span class="priority-med">Medium</span> items are worth swapping when they run out. <span class="priority-low">Low</span> items are easy upgrades when you're ready.<br><br>
+    <strong>Use the swap guide.</strong> Every toxic product has a clean alternative listed. Most are things you can make at home for pennies.<br><br>
+    <strong>Go at your pace.</strong> You don't need to throw everything out today. Replace products as they run out. In 3-6 months, your home will be almost entirely toxin-free.</p>
+  </div>
+
+  <div class="intro-section">
+    <h3>The 5 Worst Offenders</h3>
+    <p>If you only swap five things, make it these:</p>
+  </div>
+
+  <ul class="checklist">
+    <li><div class="checkbox"></div><strong>Air fresheners / plug-ins</strong> — Contain phthalates and synthetic fragrances. Use essential oils or open windows instead.</li>
+    <li><div class="checkbox"></div><strong>Non-stick cookware (Teflon)</strong> — Releases toxic fumes when heated. Switch to cast iron, stainless steel, or ceramic.</li>
+    <li><div class="checkbox"></div><strong>Conventional cleaning sprays</strong> — Full of ammonia, bleach, and VOCs. Vinegar + water does 90% of the job.</li>
+    <li><div class="checkbox"></div><strong>Dryer sheets</strong> — Coated in synthetic fragrance and chemicals. Use wool dryer balls instead.</li>
+    <li><div class="checkbox"></div><strong>Plastic food containers</strong> — Leach BPA/BPS into food when heated. Switch to glass or stainless steel.</li>
+  </ul>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 3: Kitchen -->
+<div class="page">
+  <div class="page-header">
+    <h2>Kitchen</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Where your food is stored, prepared, and cooked. This is the highest-impact room to detox.</p>
+
+  <div class="category-label">Cookware & Food Storage</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace non-stick / Teflon pans with cast iron, stainless steel, or ceramic cookware</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Switch plastic food containers to glass or stainless steel (especially for hot food)</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Stop microwaving food in plastic — transfer to a glass or ceramic dish first</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace plastic cutting boards with wood or bamboo</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch plastic wrap to beeswax wraps or silicone lids</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Replace plastic utensils with wood, bamboo, or stainless steel</li>
+  </ul>
+
+  <div class="category-label">Cleaning Products</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace conventional dish soap with plant-based, fragrance-free dish soap</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Ditch chemical counter sprays — use vinegar + water solution (1:1 ratio)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace conventional oven cleaner with baking soda + vinegar paste</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch synthetic sponges to natural cellulose sponges or dish brushes</li>
+  </ul>
+
+  <div class="category-label">Water & Beverages</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Install a water filter (countertop, under-sink, or pitcher — removes chlorine, lead, and fluoride)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace plastic water bottles with glass or stainless steel</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Switch from plastic coffee makers to French press, pour-over, or stainless steel</li>
+  </ul>
+
+  <div class="recipe-box">
+    <h4>DIY All-Purpose Kitchen Cleaner</h4>
+    <ul>
+      <li>1 cup white vinegar</li>
+      <li>1 cup water</li>
+      <li>10 drops lemon essential oil (optional)</li>
+      <li>Spray bottle — that's it. Costs about $0.50 per bottle.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 4: Bathroom -->
+<div class="page">
+  <div class="page-header">
+    <h2>Bathroom</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Personal care products absorb directly through your skin. What goes on your body goes in your body.</p>
+
+  <div class="category-label">Personal Care</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Switch conventional deodorant (with aluminum) to natural or mineral deodorant</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace shampoo/conditioner with sulfate-free, fragrance-free options</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Switch body wash/soap with synthetic fragrance to castile soap or natural bar soap</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace conventional toothpaste (with triclosan/SLS) with natural toothpaste</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch plastic toothbrush to bamboo toothbrush</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace conventional sunscreen (oxybenzone) with mineral sunscreen (zinc oxide)</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Switch cotton balls/pads to reusable organic cotton rounds</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Replace disposable razors with a safety razor (stainless steel, lifetime use)</li>
+  </ul>
+
+  <div class="category-label">Bathroom Cleaning</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace bleach-based toilet cleaner with baking soda + vinegar or plant-based cleaner</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Ditch chemical shower/tub sprays — baking soda paste + scrub brush works better</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace chemical drain cleaner with baking soda + vinegar + boiling water</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Switch conventional air freshener to essential oil diffuser or open the window</li>
+  </ul>
+
+  <div class="warning-box">
+    <h4>Ingredients to Avoid on Labels</h4>
+    <p><strong>Parabens</strong> (hormone disruptors) — <strong>Phthalates</strong> (often hidden as "fragrance") — <strong>Sodium lauryl sulfate (SLS)</strong> (skin irritant) — <strong>Triclosan</strong> (endocrine disruptor) — <strong>Oxybenzone</strong> (hormone disruptor, harms coral reefs) — <strong>Formaldehyde</strong> (carcinogen, found in some hair products)</p>
+  </div>
+
+  <div class="recipe-box">
+    <h4>DIY Bathroom Scrub</h4>
+    <ul>
+      <li>1/2 cup baking soda</li>
+      <li>Enough castile soap to form a paste</li>
+      <li>10 drops tea tree essential oil (natural disinfectant)</li>
+      <li>Scrub surfaces, rinse. Non-toxic and antibacterial.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 5: Living Room & Bedroom -->
+<div class="page">
+  <div class="page-header">
+    <h2>Living Room & Bedroom</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Where you breathe, sleep, and recover. Indoor air quality and sleep environment matter more than most people realize.</p>
+
+  <div class="room-header" style="margin-top: 0;">Living Room</div>
+
+  <div class="category-label">Air Quality</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Remove plug-in air fresheners, scented candles with synthetic fragrance, and aerosol sprays</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Add air-purifying houseplants (snake plant, pothos, spider plant, peace lily)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch scented candles to beeswax or soy candles with essential oils (or no candles)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Open windows daily for 10-15 minutes — even in winter, fresh air circulation matters</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Consider a HEPA air purifier for the main living area</li>
+  </ul>
+
+  <div class="category-label">Surfaces & Furniture</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Dust with a damp microfiber cloth (not chemical dusting sprays)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Vacuum with a HEPA-filter vacuum to trap allergens and particulates</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;When replacing furniture, choose solid wood over pressed board (which off-gasses formaldehyde)</li>
+  </ul>
+
+  <div class="room-header">Bedroom</div>
+
+  <div class="category-label">Sleep Environment</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Switch conventional bedsheets to organic cotton, linen, or bamboo (no wrinkle-free chemical treatment)</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace synthetic pillow with organic cotton, kapok, buckwheat, or natural latex</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Remove electronics from the nightstand (reduce EMF exposure near your head)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;When replacing your mattress, choose organic/natural latex, organic cotton, or wool</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Use blackout curtains made of natural fabric instead of vinyl-backed curtains</li>
+  </ul>
+
+  <div class="info-box">
+    <h4>Why Air-Purifying Plants Work</h4>
+    <p>NASA research found that common houseplants can remove up to 87% of air toxins in 24 hours. Snake plants release oxygen at night, making them ideal for bedrooms. Pothos and spider plants are nearly unkillable and filter formaldehyde, benzene, and xylene from indoor air.</p>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 6: Laundry Room -->
+<div class="page">
+  <div class="page-header">
+    <h2>Laundry Room</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Laundry products leave chemical residue on every piece of clothing that touches your skin all day long.</p>
+
+  <div class="category-label">Laundry Products</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace conventional laundry detergent with plant-based, fragrance-free detergent</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Eliminate dryer sheets — use wool dryer balls (reusable for 1,000+ loads)</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Ditch conventional fabric softener (coats fabric in chemical film) — use white vinegar in the rinse cycle</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace chlorine bleach with oxygen bleach (sodium percarbonate) for whitening</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch stain remover spray to a paste of baking soda + hydrogen peroxide</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Line-dry clothes when possible — saves energy and avoids dryer chemical exposure</li>
+  </ul>
+
+  <div class="info-box">
+    <h4>The "Fragrance" Loophole</h4>
+    <p>Companies are not legally required to disclose what's inside the word "fragrance" on a label. A single fragrance can contain up to 3,000 different chemical ingredients — many of them known hormone disruptors, allergens, and neurotoxins. If a product says "fragrance" or "parfum" and doesn't specify what that means, avoid it.</p>
+  </div>
+
+  <div class="room-header">Garage & Storage</div>
+  <p class="subtitle" style="margin-top: -6px;">Where many of the most toxic products in your home are stored.</p>
+
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace conventional pesticides/herbicides with natural alternatives (diatomaceous earth, neem oil, vinegar)</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Dispose of old paint, solvents, and chemicals at a hazardous waste facility (don't pour down drains)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace chemical ant/roach killer with borax bait traps or diatomaceous earth</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch chemical weed killer (glyphosate) to boiling water, vinegar spray, or manual pulling</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Store all chemicals in a well-ventilated area away from living spaces</li>
+  </ul>
+
+  <div class="warning-box">
+    <h4>Glyphosate (Roundup)</h4>
+    <p>The most widely used herbicide in the world is classified as a "probable carcinogen" by the WHO. It's found in most conventional lawns and nearly all non-organic food. Switching to vinegar-based weed control and buying organic produce are two of the highest-impact changes you can make.</p>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 7: Kids & Nursery + Pets -->
+<div class="page">
+  <div class="page-header">
+    <h2>Kids, Nursery & Pets</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Children and pets are more vulnerable to chemicals — smaller bodies, faster metabolism, closer to the ground.</p>
+
+  <div class="room-header" style="margin-top: 0;">Children's Rooms & Nursery</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Use fragrance-free, plant-based baby/kid soap, shampoo, and lotion</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Choose organic cotton crib sheets, pajamas, and blankets (conventional cotton is heavily sprayed)</li>
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Avoid foam mattresses with fire retardant chemicals — choose organic/natural options</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Use non-toxic, VOC-free paint in children's rooms</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Choose wood or silicone toys over plastic (especially for teething/mouthing age)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Replace baby wipes with water wipes or cloth wipes</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Use natural diaper cream (zinc oxide-based) instead of petroleum-based</li>
+  </ul>
+
+  <div class="room-header">Pet Areas</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><span class="priority-high">High</span> &nbsp;Replace chemical flea/tick treatments with natural alternatives (discuss with holistic vet)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Switch to stainless steel or ceramic food/water bowls (not plastic)</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Wash pet bedding with fragrance-free, plant-based detergent</li>
+    <li><div class="checkbox"></div><span class="priority-med">Med</span> &nbsp;Clean pet areas with vinegar solution instead of chemical cleaners (pets lick floors)</li>
+    <li><div class="checkbox"></div><span class="priority-low">Low</span> &nbsp;Choose natural fiber pet beds over synthetic</li>
+  </ul>
+
+  <div class="info-box">
+    <h4>The Floor Factor</h4>
+    <p>Children under 3 and pets spend most of their time on or near the floor, where heavy chemicals settle. Dust from flame retardants, pesticide residue tracked in on shoes, and off-gassing from carpets concentrate at floor level. Three simple fixes: take shoes off at the door, vacuum with a HEPA filter, and wet-mop with plain water weekly.</p>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 8: The Swap Guide -->
+<div class="page">
+  <div class="page-header">
+    <h2>The Swap Guide</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Quick reference — what to ditch and what to switch to. Replace as products run out.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 30%;">Toxic Product</th>
+        <th style="width: 35%;">Clean Alternative</th>
+        <th style="width: 15%;">Cost</th>
+        <th style="width: 20%;">Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Non-stick cookware (Teflon)</td><td>Cast iron or stainless steel</td><td>One-time buy</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Plastic food containers</td><td>Glass containers with lids</td><td>One-time buy</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Air fresheners / plug-ins</td><td>Essential oil diffuser or open windows</td><td>$15-30 once</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Chemical cleaning sprays</td><td>Vinegar + water + essential oil</td><td>~$0.50/bottle</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Dryer sheets</td><td>Wool dryer balls (1,000+ loads)</td><td>$10-15 once</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Conventional laundry detergent</td><td>Plant-based, fragrance-free detergent</td><td>Same price</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Conventional deodorant</td><td>Natural mineral deodorant</td><td>Same price</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Tap water (unfiltered)</td><td>Countertop or pitcher filter</td><td>$20-50 once</td><td><span class="priority-high">High</span></td></tr>
+      <tr><td>Chemical sunscreen</td><td>Mineral sunscreen (zinc oxide)</td><td>Same price</td><td><span class="priority-med">Med</span></td></tr>
+      <tr><td>Plastic wrap</td><td>Beeswax wraps or silicone lids</td><td>$10-15 once</td><td><span class="priority-med">Med</span></td></tr>
+      <tr><td>Scented candles (paraffin)</td><td>Beeswax or soy candles</td><td>$5-15</td><td><span class="priority-med">Med</span></td></tr>
+      <tr><td>Chemical pest control</td><td>Diatomaceous earth, neem oil</td><td>$10-20</td><td><span class="priority-med">Med</span></td></tr>
+      <tr><td>Bleach</td><td>Oxygen bleach (sodium percarbonate)</td><td>Same price</td><td><span class="priority-med">Med</span></td></tr>
+      <tr><td>Plastic water bottles</td><td>Glass or stainless steel bottle</td><td>$15-25 once</td><td><span class="priority-med">Med</span></td></tr>
+      <tr><td>Synthetic sponges</td><td>Natural cellulose or dish brush</td><td>Same price</td><td><span class="priority-low">Low</span></td></tr>
+      <tr><td>Disposable razors</td><td>Stainless steel safety razor</td><td>$25 once</td><td><span class="priority-low">Low</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <h4>The Real Cost</h4>
+    <p>Most clean swaps are either the same price or cheaper than the toxic versions. A $25 cast iron pan lasts a lifetime. A $0.50 vinegar spray replaces a $5 chemical spray every month. The biggest myth about clean living is that it's expensive — it's actually one of the most frugal things you can do.</p>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 9: DIY Recipes + Label Reading -->
+<div class="page">
+  <div class="page-header">
+    <h2>DIY Recipes & Label Guide</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Save money and control exactly what goes into your products.</p>
+
+  <div class="two-col">
+    <div class="recipe-box">
+      <h4>All-Purpose Cleaner</h4>
+      <ul>
+        <li>1 cup white vinegar</li>
+        <li>1 cup water</li>
+        <li>10 drops essential oil (lemon, tea tree, or lavender)</li>
+      </ul>
+      <p style="margin-top: 6px;">Works on counters, glass, appliances. ~$0.50/bottle.</p>
+    </div>
+
+    <div class="recipe-box">
+      <h4>Soft Scrub (Bathroom/Kitchen)</h4>
+      <ul>
+        <li>1/2 cup baking soda</li>
+        <li>Liquid castile soap (enough to form paste)</li>
+        <li>10 drops tea tree oil</li>
+      </ul>
+      <p style="margin-top: 6px;">Scrubs tubs, sinks, tiles. Natural disinfectant.</p>
+    </div>
+
+    <div class="recipe-box">
+      <h4>Glass Cleaner</h4>
+      <ul>
+        <li>1 cup water</li>
+        <li>1 cup rubbing alcohol</li>
+        <li>1 tbsp white vinegar</li>
+      </ul>
+      <p style="margin-top: 6px;">Streak-free windows and mirrors.</p>
+    </div>
+
+    <div class="recipe-box">
+      <h4>Laundry Freshener</h4>
+      <ul>
+        <li>1/2 cup white vinegar in rinse cycle</li>
+        <li>Wool dryer balls + 3 drops lavender oil</li>
+      </ul>
+      <p style="margin-top: 6px;">Softens fabric, eliminates static, no chemicals.</p>
+    </div>
+
+    <div class="recipe-box">
+      <h4>Drain Cleaner</h4>
+      <ul>
+        <li>1/2 cup baking soda down drain</li>
+        <li>1/2 cup vinegar — let fizz 15 min</li>
+        <li>Flush with boiling water</li>
+      </ul>
+      <p style="margin-top: 6px;">Monthly maintenance prevents clogs naturally.</p>
+    </div>
+
+    <div class="recipe-box">
+      <h4>Room Spray / Deodorizer</h4>
+      <ul>
+        <li>1 cup distilled water</li>
+        <li>2 tbsp rubbing alcohol or witch hazel</li>
+        <li>15-20 drops essential oil of choice</li>
+      </ul>
+      <p style="margin-top: 6px;">Replaces Febreze, plug-ins, and chemical sprays.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 16px;">
+    <div class="category-label">How to Read a Product Label</div>
+    <p style="font-size: 10px; line-height: 1.6; color: #444; margin-top: 6px;">
+      <strong>Red flags on any label:</strong> "fragrance" or "parfum" (hidden chemicals), "antibacterial" (usually triclosan), "wrinkle-free" or "stain-resistant" (PFAS chemicals), "flame retardant" (toxic brominated compounds).
+    </p>
+    <p style="font-size: 10px; line-height: 1.6; color: #444; margin-top: 6px;">
+      <strong>Trustworthy certifications:</strong> USDA Organic, EWG Verified, MADE SAFE, OEKO-TEX Standard 100, Green Seal, Leaping Bunny (cruelty-free).
+    </p>
+    <p style="font-size: 10px; line-height: 1.6; color: #444; margin-top: 6px;">
+      <strong>Rule of thumb:</strong> If you can't pronounce it and it's not a food ingredient, research it before putting it on your skin or in your home.
+    </p>
+  </div>
+
+  <div class="page-footer">0mn1.one — Abundance for all life</div>
+</div>
+
+<!-- PAGE 10: Progress Tracker + Closing -->
+<div class="page">
+  <div class="page-header">
+    <h2>Your Detox Progress</h2>
+    <span class="brand">0mn1.one</span>
+  </div>
+  <p class="subtitle">Track your journey. Check off each room as you complete it. Write your target date and any notes.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 5%;"></th>
+        <th style="width: 25%;">Room / Area</th>
+        <th style="width: 20%;">Target Date</th>
+        <th style="width: 20%;">Completed</th>
+        <th style="width: 30%;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Kitchen</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Bathroom</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Living Room</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Bedroom</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Laundry Room</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Garage / Storage</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Kids / Nursery</td><td></td><td></td><td></td></tr>
+      <tr><td><div class="checkbox" style="margin: 0 auto;"></div></td><td>Pet Areas</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top: 16px;">
+    <div class="category-label">My Biggest Wins</div>
+    <div class="notes-lines">
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+  </div>
+
+  <div style="margin-top: 16px;">
+    <div class="category-label">Products I Still Need to Replace</div>
+    <div class="notes-lines">
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px; text-align: center; padding: 24px; background: #f0f5f1; border-radius: 8px;">
+    <p style="font-size: 17px; font-weight: 700; color: #5a8a6a; margin-bottom: 8px;">Your home should be the safest place on Earth.</p>
+    <p style="font-size: 11px; color: #666; line-height: 1.6; max-width: 5in; margin: 0 auto;">Every product you swap is a vote for your health, your family's health, and the health of the planet. You don't have to be perfect. You just have to start. One swap at a time, one room at a time. The change compounds.</p>
+    <p style="font-size: 11px; color: #999; margin-top: 16px;">0mn1.one — Abundance for all life</p>
+  </div>
+
+  <div class="page-footer">© 2026 0mn1.one — Share freely, live cleanly</div>
+</div>
+
+</body>
+</html>
