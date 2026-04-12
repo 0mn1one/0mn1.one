@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Nav } from "@/components/nav";
+import { BrandName } from "@/components/brand";
 
 function Hero() {
   return (
@@ -234,7 +235,7 @@ function Footer() {
     <footer className="py-12 px-6 border-t border-foreground/5">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-foreground/40">
         <p>
-          0mn1<span className="text-accent">.one</span> — For all life.
+          <BrandName /> — For all life.
         </p>
         <p className="font-mono text-xs">
           One apple seed. Countless apples.
