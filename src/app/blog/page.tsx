@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
+import { Nav } from "@/components/nav";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,21 +14,7 @@ export default function BlogIndex() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-foreground/5">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-semibold tracking-tight">
-            0mn1<span className="text-accent">.one</span>
-          </Link>
-          <div className="flex items-center gap-8 text-sm">
-            <Link
-              href="/blog"
-              className="text-foreground font-medium"
-            >
-              Blog
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
