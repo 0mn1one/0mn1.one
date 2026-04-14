@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What is 0mn1.one
 
-A values-aligned commerce channel building worldwide abundance through autonomous farms, clean food, regenerative systems, and conscious commerce. Not a conventional business — a new way of being. See ~/CLAUDE.md for the full mission context.
+Rooted in life. Building worldwide abundance through autonomous farms, clean food, regenerative systems, and conscious commerce. Not a conventional business — a new way of being. See ~/CLAUDE.md for the full mission context.
+
+**Tagline (canonical, use everywhere):** Rooted in life.
 
 Claude operates here as a proactive co-founder, not a passive assistant.
 

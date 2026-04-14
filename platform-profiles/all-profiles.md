@@ -38,7 +38,7 @@ Your current skills list has too much filler (Thank you card, Thank you letter w
 **Shop Name:** 0mn1 Digital
 
 **Shop Bio:**
-Clean living starts with knowledge. We create digital guides, planners, and resources for people ready to grow their own food, detox their homes, and live closer to nature. Every purchase funds our mission of building abundance for all life.
+Rooted in life. We create digital guides, planners, and resources for people ready to grow their own food, detox their homes, and live closer to nature. Every purchase funds our mission of worldwide abundance for all life.
 
 **Shop Sections:**
 - Digital Guides
@@ -54,7 +54,7 @@ Clean living starts with knowledge. We create digital guides, planners, and reso
 **Name:** 0mn1.one
 
 **Bio:**
-Building abundance for all life. We create guides, tools, and resources for clean living — growing food, detoxing your home, and living in alignment with nature. Every dollar funds autonomous farms and regenerative systems worldwide.
+Rooted in life. We create guides, tools, and resources for clean living — growing food, detoxing your home, and living in alignment with nature. Every dollar funds autonomous farms and regenerative systems worldwide.
 
 ---
 
@@ -90,7 +90,7 @@ Building abundance for all life. We create guides, tools, and resources for clea
 ## INSTAGRAM BIO
 ```
 0mn1.one
-Abundance for all life.
+Rooted in life.
 Clean food. Clean homes. Clean living.
 linktr.ee/0mn1one (or 0mn1.one once site is live)
 ```
@@ -100,7 +100,7 @@ linktr.ee/0mn1one (or 0mn1.one once site is live)
 ## TIKTOK BIO
 ```
 0mn1.one
-Clean living. Growing food. Building abundance.
+Rooted in life. Clean living. Growing food. Building abundance.
 ```
 
 ---
@@ -111,7 +111,7 @@ Clean living. Growing food. Building abundance.
 
 **Bio:**
 ```
-Building abundance for all life. Clean food, clean homes, regenerative systems. One apple seed gives you countless apples.
+Rooted in life. Building abundance for all forms of it — clean food, clean homes, regenerative systems. One apple seed gives you countless apples.
 ```
 
 **Website:** https://0mn1.one

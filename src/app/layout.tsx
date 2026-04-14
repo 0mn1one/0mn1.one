@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "0mn1.one — Abundance for All Life",
+  title: "0mn1.one — Rooted in life.",
   description:
-    "A values-aligned commerce channel building worldwide abundance through autonomous farms, clean food, and regenerative systems. For every form of life.",
+    "Rooted in life. Building worldwide abundance through autonomous farms, clean food, and regenerative systems. For every form of life.",
   keywords: [
     "regenerative agriculture",
     "autonomous farming",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     "clean living",
   ],
   openGraph: {
-    title: "0mn1.one — Abundance for All Life",
+    title: "0mn1.one — Rooted in life.",
     description:
-      "Building the infrastructure for worldwide abundance. Clean food, autonomous farms, regenerative systems.",
+      "Rooted in life. Building the infrastructure for worldwide abundance. Clean food, autonomous farms, regenerative systems.",
     type: "website",
   },
 };

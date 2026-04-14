@@ -9,7 +9,7 @@ function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="animate-fade-in">
           <p className="text-accent font-mono text-sm tracking-widest uppercase mb-6">
-            Values-Aligned Commerce
+            Rooted in life.
           </p>
         </div>
         <h1 className="animate-fade-in-delay-1 text-5xl sm:text-7xl font-bold tracking-tight leading-[1.1] mb-8">
@@ -235,7 +235,7 @@ function Footer() {
     <footer className="py-12 px-6 border-t border-foreground/5">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-foreground/40">
         <p>
-          <BrandName /> — For all life.
+          <BrandName /> — Rooted in life.
         </p>
         <p className="font-mono text-xs">
           One apple seed. Countless apples.
